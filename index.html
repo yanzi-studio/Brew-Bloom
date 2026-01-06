@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew & Bloom Café</title>
+
+  <!-- GOOGLE FONTS -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fffaf3;
+      color: #3b2f2f;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: #3b2f2f;
+      color: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.7rem;
+    }
+
+    .navbar a {
+      color: #ffd369;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar a:hover {
+      color: #fff;
+    }
+
+    /* HERO */
+    .hero {
+      height: 90vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url("https://images.unsplash.com/photo-1509042239860-f550ce710b93") center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero-text {
+      color: #fff;
+      max-width: 650px;
+      padding: 20px;
+    }
+
+    .hero-text h2 {
+      font-size: 3.2rem;
+    }
+
+    .hero-text span {
+      color: #ffd369;
+    }
+
+    .hero-text p {
+      margin: 18px 0;
+      font-size: 1.15rem;
+      font-weight: 300;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      background: #ffd369;
+      color: #3b2f2f;
+      padding: 12px 28px;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ffb703;
+      transform: scale(1.05);
+    }
+
+    /* ABOUT */
+    .about {
+      padding: 80px 20px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .about h2 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 1.05rem;
+      font-weight: 300;
+    }
+
+    /* MENU */
+    .menu {
+      padding: 80px 20px;
+      background: #fff1dc;
+      text-align: center;
+    }
+
+    .menu h2 {
+      font-size: 2.4rem;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      margin-top: 45px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 35px 25px;
+      border-radius: 18px;
+      box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+      height: 260px; /* 👉 EQUAL HEIGHT */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
+
+    .card:hover {
+      transform: translateY(-12px);
+    }
+
+    /* CONTACT */
+    .contact {
+      padding: 80px 20px;
+      background: #3b2f2f;
+      color: #fff;
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+      font-size: 2.3rem;
+    }
+
+    .contact p {
+      font-weight: 300;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #2a1f1f;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.85rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      .hero-text h2 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h1 class="logo">☕ Brew & Bloom</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>Your Daily Dose of <span>Happiness</span></h2>
+      <p>Fresh coffee. Cozy atmosphere. Crafted for comfort.</p>
+      <a href="#menu" class="btn">View Menu</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2>Why Brew & Bloom?</h2>
+    <p>
+      Brew & Bloom is more than a café — it’s a place to slow down,
+      sip quality coffee, and enjoy warm, vibrant moments.
+    </p>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <h2>Our Best Sellers</h2>
+
+    <div class="menu-grid">
+      <div class="card">
+        <h3>☕ Caramel Latte</h3>
+        <p>Smooth espresso blended with rich caramel.</p>
+      </div>
+
+      <div class="card">
+        <h3>🍫 Mocha Bliss</h3>
+        <p>Chocolatey goodness with bold coffee notes.</p>
+      </div>
+
+      <div class="card">
+        <h3>🥐 Butter Croissant</h3>
+        <p>Golden, flaky, freshly baked every morning.</p>
+      </div>
+
+      <div class="card">
+        <h3>🍵 Matcha Cream</h3>
+        <p>Earthy matcha topped with creamy foam.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2>Visit Us Today</h2>
+    <p>📍 Cebu City, Philippines</p>
+    <p>📞 0912 345 6789</p>
+    <br>
+    <a href="#" class="btn">Message Us</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Brew & Bloom Café | Website by Yanzi</p>
+  </footer>
+
+</body>
+</html>
